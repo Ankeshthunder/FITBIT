@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:id="@+id/pro">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/propic"
+            android:layout_width="121dp"
+            android:layout_height="151dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/body1"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:layout_width="231dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/propic"
+            android:layout_marginRight="8dp"
+            android:text="John Smith"
+            android:gravity="fill_vertical"
+            android:id="@+id/uname"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            />
+        <TextView
+            android:layout_width="231dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/uname"
+            android:layout_toRightOf="@+id/propic"
+            android:layout_marginRight="8dp"
+            android:text="aa@gmail.com"
+            android:gravity="fill_vertical"
+            android:id="@+id/email"
+            android:textSize="12dp"
+            android:textColor="#ffffff"/>
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="231dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/email"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/propic"
+            android:id="@+id/sbar"
+            android:max="100"
+            android:progress="89"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/propic"
+            android:layout_below="@+id/sbar"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/uname"
+                android:layout_toRightOf="@+id/propic"
+                android:layout_marginRight="8dp"
+                android:text="Weight:75kg"
+                android:textStyle="bold"
+                android:gravity="fill_vertical"
+                android:id="@+id/wt"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:id="@+id/ht"
+                android:layout_width="103dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/uname"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/propic"
+                android:gravity="fill_vertical"
+                android:text="Height:5'11"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/daily"
+        android:layout_below="@+id/pro"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:textStyle="bold"
+            android:text="Daily Goal"
+            android:textSize="15dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ffffff"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="125dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cal"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/calr"
+                    android:paddingLeft="5dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#A907C5"/>
+
+                <TextView
+                    android:id="@+id/caldesc"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/cal"
+                    android:layout_marginTop="40dp"
+                    android:text="Calorie"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"
+                    />
+                <TextView
+                    android:id="@+id/calcount"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/cal"
+                    android:layout_below="@+id/caldesc"
+                    android:text="330Kcal"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#C2C2C4"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="125dp"
+                >
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/step"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/step"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#A907C5"/>
+
+                <TextView
+                    android:id="@+id/stepdesc"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/step"
+                    android:layout_marginTop="40dp"
+                    android:text="Steps"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:id="@+id/stepcount"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/step"
+                    android:layout_below="@+id/stepdesc"
+                    android:text="00"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#C2C2C4"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/fitness"
+        android:layout_below="@+id/daily"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:textStyle="bold"
+            android:text="Fitness Goals"
+            android:textSize="15dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ffffff"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="125dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/run"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/run"
+                    android:paddingLeft="5dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#A907C5"/>
+
+                <TextView
+                    android:id="@+id/rundesc"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/run"
+                    android:layout_marginTop="40dp"
+                    android:text="Running"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:id="@+id/runtips"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/run"
+                    android:layout_below="@+id/rundesc"
+                    android:text="5 Times/Weekly"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#C2C2C4"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="125dp"
+                >
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/food"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/foody"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#A907C5"
+                    />
+
+                <TextView
+                    android:id="@+id/fooddesc"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/food"
+                    android:layout_marginTop="40dp"
+                    android:text="Food Tips"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:id="@+id/foodtips"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/food"
+                    android:layout_below="@+id/fooddesc"
+                    android:text="5 Times/Weekly"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#C2C2C4"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/fit"
+        android:layout_below="@+id/fitness"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="125dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cardio"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/cardio"
+                    android:paddingLeft="5dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#A907C5"/>
+
+                <TextView
+                    android:id="@+id/cardiodesc"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/cardio"
+                    android:layout_marginTop="10dp"
+                    android:text="Cardiovascular"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:id="@+id/cardiotips"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/cardio"
+                    android:layout_below="@+id/cardiodesc"
+                    android:text="5Times/Weekly "
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#C2C2C4"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="125dp"
+                >
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/appt"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/appt"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#A907C5"/>
+
+                <TextView
+                    android:id="@+id/apptdesc"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/appt"
+                    android:layout_marginTop="10dp"
+                    android:text="Appointment"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:id="@+id/appttips"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@+id/appt"
+                    android:layout_below="@+id/apptdesc"
+                    android:text="2Times/weekly"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#C2C2C4"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
